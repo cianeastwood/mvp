@@ -1,0 +1,38 @@
+{% extends "vola/base.html" %}
+{% block title %}Home{% endblock %}
+{% block nav %}
+	<li role="presentation" class="active"><a href="#">Home</a></li>
+	<li role="presentation"><a href="{% url 'vola:performance' %}">Performance</a></li>
+	<li role="presentation"><a href="{% url 'vola:custom' %}">Custom</a></li>
+	<li role="presentation"><a href="{% url 'vola:about' %}">About</a></li>
+{% endblock %}
+{% block jumbotron %}
+<div class="jumbotron">
+	<h2>Minimizing Volatility, Maximizing Diversification.</h2>
+	<p class="lead">Extending the low-volatility anomaly. Beating the S&amp;P 500.</p>
+</div>
+{% endblock %}
+{% block content %}
+	<div class="col-lg-6">
+		<h4>Motivation</h4>
+		<p>Contrary to the fundamental principles of finance, portfolios of low­-volatility stocks tend to yield higher risk­-adjusted returns than portfolios of high­ volatility stocks. The observation that high­ risk stocks are not rewarded with correspondingly higher returns is a long­ standing critique of the Capital Asset Pricing Model (CAPM) (<a href="http://www.hillsdaleinv.com/portal/uploads/The_Efficient_Market_Inefficiency_of_Capitalization-Weighted_Stock_Portfolios,_R._Haugen,_N._Baker,_The_Journal_of_Portfolio_Management,_March_1991,_Pages_35-40.pdf">Baker and Haugen, 1991</a>; <a href="http://home.cerge-ei.cz/petrz/GDN/Fama_French_92.pdf">Fama and French, 1992</a>). <a href="http://repub.eur.nl/pub/10460/ERS-2007-044-F&A.pdf">Blitz and Van Vliet (2007)</a> reinforced the anomaly by providing evidence that low­ volatility stocks have earned higher risk­-adjusted returns than the market portfolio before <a href="http://www.cfapubs.org/doi/pdf/10.2469/faj.v67.n1.4">Baker, Bradley and Wurgler (2011)</a> labelled it as “one of the greatest anomalies in finance”. Furthermore, recent studies have suggested that a similar effect may exist for portfolio volatility. Baker et al. (2011) showed the benefits of sacrificing individual stock volatility to reduce portfolio volatility before <a href="https://dash.harvard.edu/bitstream/handle/1/11130436/bakerm,bradley,taliaferro_low-beta_FINAL-Decomposition-of-Low%20-Risk.pdf?sequence=1">Baker, Bradley and Taliaferro (2014)</a> suggested that diversification in this manner can form lower­ risk portfolios that do not suffer from corresponding lower returns.</p>
+		<h4>Goals</h4>
+		<h5>Extending The Anomaly To Portfolios</h5>
+		<p>Can optimally minimizing historical portfolio volatility, using daily returns, amplify the low­-volatility effect through diversification?</p>
+		<h5>Optimal Minimization</h5>
+		<p>Finding the optimal allocation of shares to minimize the standard deviation of daily portfolio returns.</p>
+		<h5>Making A Profit</h5>
+		<p>Whether optimizing portfolio volatility in this manner can be realistically exploited to​ make a profit.</p>
+		<h4>Backtesting Performance</h4>
+		<p>For each analysis, the minimization parameters were fitted over the training period and then compared against standard U.S. benchmarks over the test period.​ For each year in the training period, the historical volatility of that year’s S&amp;P 500 constituents was minimized with the given parameters and the resulting portfolio’s performance was analyzed over the following year. This methodology allowed accurate performance replication by using only information that was available to investors on the day of simulated investment. Subsequently, training period performance was calculated for every possible combination of parameters. Performance metrics used over the training period included average volatility, average return, average risk­-adjusted return, volatility variance, return variance and risk­adjusted return variance. These metrics allowed both the magnitude and consistency of the portfolio's performance to be evaluated. In order to determine the optimum parameter settings, each parameter was plotted against each performance metric while holding the other parameters constant. The manual inspection of these graphs allowed general correlations to be uncovered between each parameter and the corresponding portfolio’s performance. Furthermore, this approach avoided choosing a set of parameters that randomly excelled in the training period ­which may have happened if selection was instead based on an automated formula. </p>
+	</div>
+	<div class="col-lg-6">
+		<h4>Results</h4>
+		<p>Not only does the portfolio outperform both benchmarks in terms of risk-adjusted return, but it consistently achieves both a lower volatility and higher return for each of the four years. See <a href="{% url 'vola:performance' %}">performance</a> for more details.</p>
+	</div>
+	<div class="col-lg-6">
+		<h4>Conclusion</h4>
+		<p>By optimally minimizing historical volatility, I was able to generate the most diverse portfolio and provide evidence that it consistently outperforms both the S&amp;P 500 index and the S&amp;P 500 Low Volatility index. Furthermore, I showed that its performance levels were maintained into the future without the need for rebalancing, eliminating the profit limitations professed by <a href="http://www.cfapubs.org/doi/abs/10.2469/faj.v70.n1.3">Li et al. (2009) </a>. Further research is required with complete historical data to solidify the results and investigate whether the use of formal selection criteria results in better minimization parameters.</p>
+		<p>In conclusion, the results provide strong evidence that the low­-volatility anomaly does extend to portfolios of low overall volatility. Furthermore, the evidence not only suggests that the extended anomaly outperforms the original anomaly, but that it stems from the independent source of diversification and hence is less reliant on the behavioral biases, benchmarking habits and leverage access of the investing world (Baker et al., 2011).</p>
+	</div>
+{% endblock %}

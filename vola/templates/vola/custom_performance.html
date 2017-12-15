@@ -1,0 +1,135 @@
+{% extends "vola/base.html" %}
+{% block title %}Custom Performance{% endblock %}
+{% block nav %}
+  <li role="presentation"><a href="{% url 'vola:index' %}">Home</a></li>
+  <li role="presentation"><a href="{% url 'vola:performance' %}">Performance</a></li>
+  <li role="presentation" class="active"><a href="{% url 'vola:custom' %}">Custom</a></li>
+  <li role="presentation"><a href="{% url 'vola:about' %}">About</a></li>
+{% endblock %}
+{% block jumbotron %}
+	{%if performance %}
+		<div class="jumbotron">
+			<h1>Portfolio Performance</h1>
+			<p class="lead">
+				This is how your portfolio has performed since 2012 with an annual rebalance.
+				<a href="#" data-toggle="modal" data-target="#myModal">More Details</a>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Portfolio Performance</h4>
+				      </div>
+				      <div class="modal-body">
+				        <h4>Methodology</h4>
+		      			<dl>
+		      				<dt>Analysis</dt>
+		      				<dd>The porfolio's performance was analysed over the year following it's calculaton.</dd>
+		      				<dt>Rebalancing</dt>
+		      				<dd>The porfolio was rebalanced annually leading to an accumulated value over the test period. </dd>
+		      			</dl>
+		      			<h4>Benchmarks</h4>
+		      			<dl>
+		      				<dt><a href="http://us.spindices.com/indices/equity/sp-500">S&amp;P 500</a></dt>
+		      				<dd>Top 500 companies - the most common benchmark for the US stock market.</dd>
+		      				<dt><a href="http://us.spindices.com/indices/strategy/sp-500-low-volatility-index">S&amp;P 500 LV</a></dt>
+		      				<dd>Using only the 100 least volatile stocks, constituents are weighted relative to the inverse of their corresponding volatility, with the least volatile stocks receiving the highest weights.</dd>
+		      			</dl>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</p>
+			<div id="graph">
+				{{fig|safe}}
+			</div>
+			<div id="stats">
+				<table class = "table table-condensed">
+					<caption>Annual Performance Statistics (having invested a year previously)</caption>
+					<thead>
+						<tr>
+						    <th></th>   
+						    <th colspan="3">Volatility (%)</th>   
+						    <th colspan="3">Return (%)</th>   
+						    <th></th> 
+					    </tr>
+					  	<tr>
+							<th>Date</th>
+							<th>Portfolio</th>
+							<th>S&amp;P 500</th>
+							<th>S&amp;P 500 LV</th>
+							<th>Portfolio</th>
+							<th>S&amp;P 500</th>
+							<th>S&amp;P 500 LV</th>
+							<th>Sharpe</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for year in stats%}
+					      	<tr>
+						        <td>{{year.0}}</td>
+						        <td>{{year.1.0|floatformat:2}}</td>
+						        <td>{{year.1.1|floatformat:2}}</td>
+						        <td>{{year.1.2|floatformat:2}}</td>
+						        <td>{{year.2.0|floatformat:2}}</td>
+						        <td>{{year.2.1|floatformat:2}}</td>
+						        <td>{{year.2.2|floatformat:2}}</td>
+						        <td>{{year.3|floatformat:2}}</td>
+					      	</tr>
+					    {% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}
+{% block content %}
+	{% load humanize %}
+	<h4>Calculation</h4>
+	<p>Your custom portolio was calculated using {% if lv %}the 100 least volatile {% else %}all of the{% endif %} S&amp;P 500 stocks, an investment of ${{investment|intcomma}} and a minimum spread of {{minimum_spread}} companies. Given these parameters/contraints, the shares/weightings below optimally minimize the portfolio volatility over the past {{period}} years - achieving a volatility of {{min_vol|floatformat:2}}% over that period.</p>
+	<table class = "table table-condensed">
+		<caption>Portfolio Details</caption>
+		<thead>
+		  	<tr>
+			     <th>Company</th>
+			     <th>GICS Sector</th>
+			     <th>GICS Sub Industry</th>
+			     <th>Price($)</th>
+			     <th>Shares</th>
+			     <th>Invested($)</th>
+			     <!-- <th>Share Price (USD)</th>-->
+			     <!-- <th>Invested (USD)</th>-->
+			</tr>
+		</thead>
+		<tbody>
+			{% for company in share_data%}
+		      <tr>
+		         <td>{{company.0.0}}</td>
+		         <td>{{company.0.1}}</td>
+		         <td>{{company.0.2}}</td>
+		         <td>{{company.1|floatformat:2|intcomma}}</td>
+		         <td>{{company.2}}</td>
+		         <td>{{company.3|floatformat:2|intcomma}}</td>
+		      </tr>
+		    {% endfor %}
+		</tbody>
+		<tfoot id="total">
+			<tr>
+				 <td></td>
+		         <td></td>
+		         <td></td>
+		         <td></td>
+		         <td></td>
+		         <td>{{invested|floatformat:2|intcomma}}</td>
+			</tr>
+		</tfoot>
+	</table>
+{% endblock %}
+{% block scripts %}
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://mpld3.github.io/js/mpld3.v0.1.js"></script>
+{% endblock %}

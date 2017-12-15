@@ -1,0 +1,107 @@
+{% extends "vola/base.html" %}
+{% block title %}Custom{% endblock %}
+{% block nav %}
+	<li role="presentation"><a href="{% url 'vola:index' %}">Home</a></li>
+	<li role="presentation"><a href="{% url 'vola:performance' %}">Performance</a></li>
+	<li role="presentation" class="active"><a href="#">Custom</a></li>
+	<li role="presentation"><a href="{% url 'vola:about' %}">About</a></li>
+{% endblock %}
+{% block jumbotron %}
+{% load staticfiles %}
+<div id="jumbo" class="jumbotron">
+	<h2>Build a custom portfolio</h2>
+	<p class="lead">
+		Input your desired investment, minimum spread and minimization period and the corresponding minimum-volatility investment portfolio will be calculated.
+		<a href="#" data-toggle="modal" data-target="#myModal">Parameter Details</a>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Parameter Details</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<h4 class="params">Investment</h4>
+      			<dl>
+      				<dt>Description</dt>
+      				<dd>Amount available for investment - some are pre-calculated and stored.</dd>
+      				<dt>Volatility</dt>
+      				<dd>Larger investment results in relatively less round-off error and hence share allocations that are closer to the optimal and lower volatility.</dd>
+      				<dt>Return</dt>
+      				<dd>Larger investment results in relatively less round-off error and hence share allocations that are closer to the optimal and more consistent returns.</dd>
+      			</dl>
+      			<h4 class="params">Minimum Spread</h4>
+      			<dl>
+      				<dt>Description</dt>
+      				<dd>The minimum number of companies invested in, i.e. the reciprical of the maximum allocation to a single company.</dd>
+      				<dt>Volatility</dt>
+      				<dd>In general, a larger spread results in higher and less consistent volatility.</dd>
+      				<dt>Return</dt>
+      				<dd>In general, a larger spread results in higher and more consistent returns iff the portfolio is not otherwise loosely-constrained (i.e. low minimisation period and using all 500 stocks).</dd>
+      			</dl>
+      			<h4 class="params">Minimisation Period</h4>
+      			<dl>
+      				<dt>Description</dt>
+      				<dd>The period (in years) over which the minimum volatilty portfolio is calculated.</dd>
+      				<dt>Volatility</dt>
+      				<dd>In general, a larger period results in lower and more conistent volatility iff the portfolio is otherwise loosely constrained (i.e. a low spread and using all 500 stocks).</dd>
+      				<dt>Return</dt>
+      				<dd>In general, a larger period (up to approx. 4 years) results in higher and more consistent returns iff the portfolio is not otherwise very loosely-constrained (i.e. lowest possible spread and using all 500 stocks).</dd>
+      			</dl>
+      			<h4 class="params">Low Volatility Stocks</h4>
+      			<dl>
+      				<dt>Description</dt>
+      				<dd>Exclude volatile stocks - use the 100 least volatile stocks to calculate the minimum volatility portfolio.</dd>
+      				<dt>Volatility</dt>
+      				<dd>Using only the low-volatility stocks significantly reduces the both the range of possible outcomes and the effect of the other parameters/constraints.</dd>
+      				<dt>Return</dt>
+      				<dd>Using only the low-volatility stocks significantly reduces the both the range of possible outcomes and the effect of the other parameters/constraints.</dd>
+      			</dl>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</p>
+	<form id="customForm" class="navbar-form" role="form" action="" method="GET" data-toggle="validator" onsubmit="loader()">
+  		<div class="form-group">
+			<label>Investment</label><br>
+			<input id="investment" class="form-control" type="number" name="investment" list='investments' required min="1500" max="100000000"><br><br>
+			 <datalist id='investments'>
+			 {% for inv in investments %}
+			 	<option label='stored' value={{inv}}>
+			 {% endfor %}
+    		</datalist>
+			<label>Minimum Spread</label><br>
+			<input id="min_spread" class="form-control" type="range" name="minimum_spread" value="50" min ="25" max="100" step ="25" onchange="showValue(this.value)"/><br>
+			<span id="range">50</span><br><br>
+			<label>Minimisation Period</label><br>
+			<select class="form-control" name="period">
+				{%for period in periods%}
+					<option value={{period}}>{{period}}</option>
+				{% endfor %}
+			</select><br><br>
+			<input id="lv" type="checkbox" class="form-control" name="lv" value="true"> Low volatility stocks<br>
+			<input id="performance" type="checkbox" class="form-control" name="performance" value="true" checked> Analyse past performance<br>
+			<input id="live" type="checkbox" class="form-control" name="live" value="true" checked> Live prices<br>
+		</div><br><br>
+	<button id="submit" class="btn btn-lg btn-primary" type="submit">Calculate</button>
+	</form>
+</div>
+{% endblock %}
+{% block content %}
+	<div id="calulating" hidden="true">
+		<h2 class="calculating">Calculating...</h2>
+		<div class="progress">
+		  	<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+		</div>
+	</div>
+{% endblock %}
+{% block scripts %}
+	<script src="{% static "vola/js/custom.js" %}"></script>
+{% endblock %}
+
+

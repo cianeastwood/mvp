@@ -1,0 +1,77 @@
+{% extends "vola/base.html" %}
+{% block title %}Performance{% endblock %}
+{% block nav %}
+  <li role="presentation"><a href="{% url 'vola:index' %}">Home</a></li>
+  <li role="presentation" class="active"><a href="#">Performance</a></li>
+  <li role="presentation"><a href="{% url 'vola:custom' %}">Custom</a></li>
+  <li role="presentation"><a href="{% url 'vola:about' %}">About</a></li>
+{% endblock %}
+{% block jumbotron %}
+<div class="jumbotron">
+	<h2>Backtesting Performance</h2>
+	<p class="lead">
+		By investing $100,000 at the beginning of the test period and annually rebalancing the portfolio, the performance was measured against suitable benchmarks as below. <a href="#" data-toggle="modal" data-target="#myModal">More Details</a>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Backtesting Performance</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>After tuning the parameters over the training period (2006-2012), I simulated the portfolio's performance over the test period with an annual rebalance. Each year, the current value of the portfolio is reinvested in the newly-calculated minimum volatility portfolio using the stocks in the S&amp;P 500 at that time. See <a href="{% url 'vola:index' %}">Home</a> for more details on the methodology.</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</p>
+	<div id="graph">
+				{{fig|safe}}
+			</div>
+			<div id="stats">
+				<table class = "table table-condensed">
+					<caption>Annual Performance Statistics (having invested a year previously)</caption>
+					<thead>
+						<tr>
+						    <th></th>   
+						    <th colspan="3">Volatility (%)</th>   
+						    <th colspan="3">Return (%)</th>   
+						    <th></th> 
+					    </tr>
+					  	<tr>
+							<th>Date</th>
+							<th>Portfolio</th>
+							<th>S&amp;P 500</th>
+							<th>S&amp;P 500 LV</th>
+							<th>Portfolio</th>
+							<th>S&amp;P 500</th>
+							<th>S&amp;P 500 LV</th>
+							<th>Sharpe</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for year in stats%}
+					      	<tr>
+						        <td>{{year.0}}</td>
+						        <td>{{year.1.0|floatformat:2}}</td>
+						        <td>{{year.1.1|floatformat:2}}</td>
+						        <td>{{year.1.2|floatformat:2}}</td>
+						        <td>{{year.2.0|floatformat:2}}</td>
+						        <td>{{year.2.1|floatformat:2}}</td>
+						        <td>{{year.2.2|floatformat:2}}</td>
+						        <td>{{year.3|floatformat:2}}</td>
+					      	</tr>
+					    {% endfor %}
+					</tbody>
+				</table>
+			</div>
+</div>
+{% endblock %}
+{% block scripts %}
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://mpld3.github.io/js/mpld3.v0.1.js"></script>
+{% endblock %}

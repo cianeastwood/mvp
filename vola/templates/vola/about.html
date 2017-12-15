@@ -1,0 +1,25 @@
+{% extends "vola/base.html" %}
+{% block title %}About{% endblock %}
+{% block nav %}
+  <li role="presentation"><a href="{% url 'vola:index' %}">Home</a></li>
+  <li role="presentation"><a href="{% url 'vola:performance' %}">Performance</a></li>
+  <li role="presentation"><a href="{% url 'vola:custom' %}">Custom</a></li>
+  <li role="presentation" class="active"><a href="#">About</a></li>
+{% endblock %}
+{% block jumbotron %}
+<div class="jumbotron">
+	<h2>About The Minimum Volatility Portfolio</h2>
+	<p class="lead">Who made it and why?</p>
+</div>
+{% endblock %}
+{% block content %}
+	<div class="col-lg-6">
+		<h4>Who</h4>
+		<p>I am a final year Computer Science &amp; Software Engineering student at <a href="https://www.maynoothuniversity.ie">Maynooth University</a>.</p>
+	</div>
+	<div class="col-lg-6">
+		<h4>Why</h4>
+		<p>As part of my final year thesis, I wanted to investigate whether or not the low-volatility anomaly held for portfolios as well as stocks.</p>
+		<p>Furthermore, I wanted to build a tool that allows people with or without a background in finance to construct a customised portfilio that consistently outperforms the market.</p>
+	</div>
+{% endblock %}
