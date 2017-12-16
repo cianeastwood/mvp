@@ -2,19 +2,30 @@
 A fast, flexible and self-maintaining real-time web application which calculates minimum volatility portfolios (MVPs). Historical portfolio volatility is optimally minimised to calculate the MVP. 
 
 ## Prerequisites
-* Stock database (available on request)
-* Python 3.4.2+, NumPy, SciPy, Django, ...
+* Python 3.4.2+, NumPy, SciPy, Django
   * pip install -r requirements.txt
+
+## Database
+* Can be reconstructed:
+  * python db/reconstruct.py (may take a while...)
+* Alternatively, a copy may be available upon request (email to request)
 
 ## Starting the web application
 * python manage.py runserver
 
 ## Functionality
 * Instantly calculate a custom and optimal MVP using live stock prices on the New York Stock Exchange (NYSE).
-  * **Input:** desired investment, range of historical minimisation period (in years), low volatility stocks only (boolean)
-  * **Output:** MVP, it's constituent stocks and corresponding shares, performance statistics over minimisation period
+  * **Input:** investment, minimum spread (number of companies, diversification), minimisation period (years), low volatility stocks only (boolean)
+  
+  ![](images/input.png)
+  
+  * **Output:** MVP constituent stocks and corresponding shares for given investment, performance statistics over minimisation period
+  
+  ![](images/output.png)
+  
 * Secure admin site
   * Self-maintaining stock database using Yahoo Finance
+  * See screenshots in images folder for examples of functionality
 
 
 ## Data model
@@ -27,3 +38,6 @@ A fast, flexible and self-maintaining real-time web application which calculates
 * **Past_Statistics:** Stores a single past statistics record for a given past portfolio and investment (plot object). Each object stores performance statistics over the year following the start date of the related past portfolio. Like the plot object, the allocations of the related past portfolio are scaled by the investment of the related plot and rounded to the closest share before calculating performance statistics over the following year. As a result, the past_statistics and plot objects are updated simultaneously.
 
 ![](images/dataModel.png)
+
+## Directory Structure
+
