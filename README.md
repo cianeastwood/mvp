@@ -4,7 +4,7 @@ A fast, flexible and self-maintaining real-time web application which calculates
 ## Prerequisites
 * Stock database (available on request)
 * Python 3.4.2+, NumPy, SciPy, Django
-  ** pip install -r requirements.txt
+  * pip install -r requirements.txt
 
 ## Starting the web application
 * python manage.py runserver
