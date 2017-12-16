@@ -37,7 +37,7 @@ A fast, flexible and self-maintaining real-time web application which calculates
 * **Past_Portfolio:** Stores a single past portfolio, i.e., a past minimum-volatility portfolio for the minimisation parameters of it’s related portfolio. Enables precalculation of the minimisation function at specific dates in the past. Like portfolio, it is independent of investment to allow flexibility.
 * **Past_Statistics:** Stores a single past statistics record for a given past portfolio and investment (plot object). Each object stores performance statistics over the year following the start date of the related past portfolio. Like the plot object, the allocations of the related past portfolio are scaled by the investment of the related plot and rounded to the closest share before calculating performance statistics over the following year. As a result, the past_statistics and plot objects are updated simultaneously.
 
-![](images/dataModel.png)
+![](images/dataModelNew.png)
 
 ## Directory Structure
 
