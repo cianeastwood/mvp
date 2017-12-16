@@ -1,0 +1,26 @@
+Name                              Stmts   Miss  Cover
+-----------------------------------------------------
+db/__init__.py                        0      0   100%
+db/access.py                        148     85    43%
+db/maintenance.py                   161     96    40%
+db/reconstruction.py                151     80    47%
+db/stockInserter.py                  23      1    96%
+fyp/__init__.py                       0      0   100%
+fyp/settings.py                      17      0   100%
+manage.py                             6      0   100%
+scraper/__init__.py                   0      0   100%
+scraper/snp500.py                     8      5    38%
+scraper/ystockquote.py               91     55    40%
+vola/__init__.py                      0      0   100%
+vola/admin.py                        65     34    48%
+vola/minimizer.py                    36      0   100%
+vola/models.py                      122     12    90%
+vola/portfolioAnalyser.py            56      8    86%
+vola/portfolioCalculator.py         178    128    28%
+vola/portfolioCalculatorLive.py     119     91    24%
+vola/tests.py                       108      0   100%
+vola/urls.py                          4      4     0%
+vola/views.py                        40     26    35%
+-----------------------------------------------------
+TOTAL                              1333    625    53%
+

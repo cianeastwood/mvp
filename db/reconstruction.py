@@ -114,6 +114,7 @@ def populate_snp_2016():
   return companies
 
 def populate_stocks(start_date, end_date):
+  ''' Date: String format 'YYYYMMDD' '''
   bulklist = []
   not_added = []
   companies = Company.objects.all()
@@ -178,3 +179,15 @@ def populate_past_statistics_and_plot():
       plots.append(plot)
   bulk_update(plots, update_fields=['html'])
   Past_Statistics.objects.bulk_create(past_stats)
+
+if __name__ == '__main__':
+    populate_companies() # Create Company objects from txt file of company info
+    populate_companies_2016() # Create Company objects for more recent companies (2016) - different txt file
+    populate_historial_companies() # Recent companies in SNP not in prev txt files - create company objects (no descriptions)
+    populate_hist_snp() # Add snp companies to relevant snp list (one per year in range)
+    populate_snp_2016() # Add snp companies to relevant snp list (one per year in range) - 2016 in different file
+    populate_stocks('20000101', '20160301') # Create stock objects and populate with stock info in desired range 'YYYYMMDD'
+    populate_custom_portfolios() # Pre-compute and store all possible custom portfolios for increased peformance
+    select_suggested_portfolio() # Select suggested mvp params, i.e. spread, period, lv
+    populate_past_portfolios() # Past portfolio = old portfolio with out-of-date end date... i.e. the is a more recent Portfolio object
+    populate_past_statistics_and_plot() #Pre-compute and store portfolio stats at fixed-interval investments for increased peformance

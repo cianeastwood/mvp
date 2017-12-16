@@ -1,0 +1,11 @@
+['BOL']
+2004-01-01 2004-12-31
+Inconsistent Data!
+['CPWR']
+2011-01-01 2012-01-01
+Inconsistent Data!
+['FRX']
+2011-01-01 2012-01-01
+Inconsistent Data!
+['NYX']
+2011-01-01 2012-01-01

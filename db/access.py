@@ -67,7 +67,7 @@ def SP500(start, end, value):
   return np.array(values, dtype=np.float32)
 
 def SP500TR(start, end, value):
-  ''' Retreives S&P 500 stock matrix for the given period and value.
+  ''' Retreives S&P 500 total return stock matrix for the given period and value.
 
   :param start: A date object indicating the start of the period to be analysed.
   :param end: A date object indicating the end of the period to be analysed.

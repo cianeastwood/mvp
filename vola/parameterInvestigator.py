@@ -13,18 +13,6 @@ It enables the investigation of the effect of each parameter on volatility, retu
 
 annual_date = '0101'
 
-def investigate_parameters():
-	''' Saves plots of the minimisation parameters against both the averages and standard deviations of the performance volatility, return and risk-adjusted return.'''
-	#avoid survivorship bias - as many available symbols as possible (drops massively in '01)
-	#max minimisation period for accurate testing is 5 here (min year - max period = 1 => 2006 - 5 = 1)
-	train_start = 2000
-	train_end = 2006
-	spreads = [25, 50, 75, 100] #[1, 25, 50, 100]
-	periods = [1,2,4,8] #, 5, 8, 10]
-	lvs = [False]
-	#test_parameter(periods, spreads, lvs, "Period", "Spread", train_start, train_end)
-	test_parameter(spreads, periods, lvs, "Spread", "Period", train_start, train_end)
-
 def test_parameter(variables, fixed_variables, lvs, var_name, fixed_var_name, start, end):
     for fixed in fixed_variables:
         print(fixed)
@@ -87,4 +75,14 @@ def get_symbols(start, end, lv):
     	symbols = dba.get_lowest_100_vol(symbols, end)
     return symbols
 
-investigate_parameters()
+if __name__ == '__main__':
+	''' Saves plots of the minimisation parameters against both the averages and standard deviations of the performance volatility, return and risk-adjusted return.'''
+	#avoid survivorship bias - as many available symbols as possible (drops massively in '01)
+	#max minimisation period for accurate testing is 5 here (min year - max period = 1 => 2006 - 5 = 1)
+	train_start = 2000
+	train_end = 2006
+	spreads = [25, 50, 75, 100] #[1, 25, 50, 100]
+	periods = [1,2,4,8] #, 5, 8, 10]
+	lvs = [False]
+	#test_parameter(periods, spreads, lvs, "Period", "Spread", train_start, train_end)
+	test_parameter(spreads, periods, lvs, "Spread", "Period", train_start, train_end)

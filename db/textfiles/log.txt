@@ -1,0 +1,322 @@
+
+Date: 2015-11-06 20:05:32.117813
+Inserted historical stocks from 20130101 to 20150101
+Total Stocks Added246960
+Total Entries246960
+Not added: ['ABBV', 'ALLE', 'BXLT', 'CPGX', 'GOOG', 'HPE', 'KHC', 'MNK', 'NAVI', 'NWS', 'NWSA', 'PYPL', 'QRVO', 'WRK', 'ZTS']
+Date: 2015-11-06 20:15:57.564339
+Inserted historical stocks from 20130101 to 20150101
+Total Stocks Added: 246960
+Total Entries: 246960
+Not added: ['ABBV', 'ALLE', 'BXLT', 'CPGX', 'GOOG', 'HPE', 'KHC', 'MNK', 'NAVI', 'NWS', 'NWSA', 'PYPL', 'QRVO', 'WRK', 'ZTS']
+Date: 2015-11-06 20:30:09.351690
+Inserted historical stocks from 20130101 to 20150101
+Total Stocks Added: 490
+Total Entries: 246960
+Not added: ['ABBV', 'ALLE', 'BXLT', 'CPGX', 'GOOG', 'HPE', 'KHC', 'MNK', 'NAVI', 'NWS', 'NWSA', 'PYPL', 'QRVO', 'WRK', 'ZTS']
+
+Date: 2015-11-09 14:02:31.464366
+Inserted historical stocks from 20130101 to 20150101
+Total Stocks Added: 498
+Total Entries: 249768
+Not added: ['BXLT', 'CPGX', 'HPE', 'KHC', 'PYPL', 'QRVO', 'WRK']
+
+Date: 2015-12-01 21:09:43.211892
+Inserted historical stocks from 19500101 to 20151201
+Total Stocks Added: 505
+Total Entries: 3242545
+Not added: ['SIAL']
+
+Date: 2015-12-01 22:55:49.784062
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 505
+Total Entries: 0
+Not added: ['SIAL']
+
+Date: 2016-01-31 16:39:44.880952
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 693
+Total Entries: 667735
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GIC', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'RML', 'USW', 'WLA']
+
+Date: 2016-01-31 18:17:52.194317
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 694
+Total Entries: 666673
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GIC', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'USW', 'WLA']
+
+Date: 2016-02-05 20:21:57.554284
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 1
+Total Entries: 1195
+Not added: []
+
+Date: 2016-02-21 17:35:11.931661
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 695
+Total Entries: 9365
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GIC', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'USW', 'WLA']
+
+Date: 2016-02-22 23:32:24.875769
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 694
+Total Entries: 0
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GIC', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'RML', 'USW', 'WLA']
+
+Date: 2016-02-22 23:55:12.232889
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 695
+Total Entries: 0
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GIC', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'USW', 'WLA']
+
+Date: 2016-02-22 23:59:32.640906
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 694
+Total Entries: 0
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GIC', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'RML', 'USW', 'WLA']
+
+Date: 2016-02-23 17:19:27.304048
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 1
+Total Entries: 25
+Not added: []
+
+Date: 2016-02-24 12:05:32.851523
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 687
+Total Entries: 1314
+Not added: ['ACE', 'SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GDW', 'GIC', 'GLK', 'IKN', 'MKG', 'MZ', 'OWC', 'PWJ', 'RLM', 'RML', 'ROH', 'UPR', 'USW', 'WFR', 'WLA']
+
+Date: 2016-02-24 12:15:55.224760
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 688
+Total Entries: 1
+Not added: ['ACE', 'SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GDW', 'GIC', 'GLK', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'RML', 'ROH', 'UPR', 'USW', 'WFR', 'WLA']
+
+Date: 2016-03-01 15:30:40.042962
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 689
+Total Entries: 2639
+Not added: ['ACE', 'SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GDW', 'GIC', 'GLK', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'ROH', 'UPR', 'USW', 'WFR', 'WLA']
+
+Date: 2016-03-01 15:32:37.800029
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 690
+Total Entries: 0
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GDW', 'GIC', 'GLK', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'ROH', 'UPR', 'USW', 'WFR', 'WLA']
+
+Date: 2016-03-01 15:41:39.573813
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 690
+Total Entries: 0
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GDW', 'GIC', 'GLK', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'ROH', 'UPR', 'USW', 'WFR', 'WLA']
+
+Date: 2016-03-01 16:00:42.277452
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 690
+Total Entries: 0
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GDW', 'GIC', 'GLK', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'ROH', 'UPR', 'USW', 'WFR', 'WLA']
+
+Date: 2016-03-01 16:09:50.645457
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 690
+Total Entries: 0
+Not added: ['SIAL', 'BS', 'COMS', 'FJ', 'FLE', 'GDW', 'GIC', 'GLK', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'ROH', 'UPR', 'USW', 'WFR', 'WLA']
+
+Date: 2016-03-01 16:26:08.255842
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 99
+Total Entries: 0
+Not added: ['BS']
+
+Date: 2016-03-01 23:13:58.944013
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 0
+Total Entries: 0
+Not added: ['CXO']
+
+Date: 2016-03-01 23:17:19.965440
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 0
+Total Entries: 0
+Not added: ['CXO']
+
+Date: 2016-03-01 23:19:08.448712
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 1
+Total Entries: 2157
+Not added: []
+
+Date: 2016-03-02 16:11:36.207583
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 515
+Total Entries: 516
+Not added: ['PCL', 'PCP', 'ACE', 'BRCM', 'ALTR']
+
+Date: 2016-03-06 21:12:49.604364
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 677
+Total Entries: 2088
+Not added: ['ACE', 'BS', 'COMS', 'FJ', 'FLE', 'GIC', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'SIAL', 'USW', 'WFR', 'WLA']
+
+Date: 2016-03-09 17:17:50.850105
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 514
+Total Entries: 1030
+Not added: ['ALTR', 'PCP', 'GMCR', 'ACE', 'PCL', 'BRCM']
+
+Date: 2016-03-09 17:56:08.035986
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 2
+Total Entries: 4
+Not added: []
+
+Date: 2016-03-09 17:56:08.364230
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 2
+Total Entries: 0
+Not added: []
+
+Date: 2016-03-15 16:24:46.295935
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 516
+Total Entries: 2068
+Not added: ['PCP', 'PCL', 'ACE', 'ALTR', 'BRCM', 'GMCR']
+
+Date: 2016-03-19 10:26:03.029470
+Inserted historical stocks from 19880101 to 20000103
+Total Stocks Added: 672
+Total Entries: 241236
+Not added: ['COH', 'ENDP', 'EQIX', 'EW', 'FLR', 'GRMN', 'ISRG', 'MET', 'MON', 'ATH', 'BRL', 'BSC', 'CFC', 'JNS', 'PNU', 'ROH', 'SBL', 'SOV', 'TT', 'ILMN']
+
+Date: 2016-03-23 12:08:23.018621
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 678
+Total Entries: 4695
+Not added: ['ACE', 'BS', 'COMS', 'FJ', 'FLE', 'GIC', 'IKN', 'MKG', 'MZ', 'PWJ', 'RLM', 'SIAL', 'USW', 'WLA']
+
+Date: 2016-03-23 12:09:41.141680
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 2
+Total Entries: 8554
+Not added: []
+
+Date: 2016-03-31 02:02:31.364499
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 674
+Total Entries: 3266
+Not added: ['ACE', 'BS', 'COMS', 'FJ', 'FLE', 'FPC', 'FWC', 'GIC', 'IKN', 'MKG', 'MZ', 'PNU', 'PWJ', 'RLM', 'ROH', 'RSH', 'SIAL', 'USW', 'WFR', 'WLA']
+
+Date: 2016-03-31 04:24:56.082909
+Inserted historical stocks from 20160315 to 20160317
+Total Stocks Added: 7
+Total Entries: 14
+Not added: ['ACE']
+
+Date: 2016-03-31 04:24:57.386835
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 1
+Total Entries: 2922
+Not added: []
+
+Date: 2016-03-31 04:24:58.490847
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 5
+Total Entries: 66
+Not added: ['ACE', 'AAPL', 'GOOGL']
+
+Date: 2016-03-31 04:26:30.542474
+Inserted historical stocks from 20160315 to 20160317
+Total Stocks Added: 7
+Total Entries: 14
+Not added: ['ACE']
+
+Date: 2016-03-31 04:26:31.840572
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 1
+Total Entries: 2922
+Not added: []
+
+Date: 2016-03-31 04:26:32.832996
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 5
+Total Entries: 66
+Not added: ['ACE', 'AAPL', 'GOOGL']
+
+Date: 2016-04-10 22:10:27.275578
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 98
+Total Entries: 0
+Not added: ['ACE', 'BS']
+
+Date: 2016-04-10 22:11:14.582056
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 1
+Total Entries: 0
+Not added: []
+
+Date: 2016-04-12 18:14:36.598115
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 649
+Total Entries: 650
+Not added: ['ACE', 'ALTR', 'BEAM', 'BRCM', 'BS', 'CMCSK', 'CMVT', 'COMS', 'CPWR', 'DELL', 'FJ', 'FLE', 'FNM', 'FRE', 'FRX', 'GIC', 'HMA', 'HNZ', 'IACI', 'IKN', 'JNY', 'MEL', 'MKG', 'MOLX', 'MZ', 'NMK', 'NYX', 'OMX', 'PBCT', 'PBG', 'PBY', 'PCP', 'PTV', 'PWER', 'PWJ', 'RLM', 'RSH', 'SAPE', 'SEG', 'SIAL', 'TLAB', 'TOY', 'USW', 'WLA']
+
+Date: 2016-04-17 21:30:24.914340
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 380
+Total Entries: 1520
+Not added: ['NE', 'QCOM', 'ENDP', 'LEN', 'ROK', 'HAR', 'TJX', 'DHR', 'HRS', 'ALTR', 'GOOG', 'EXR', 'AIG', 'DLPH', 'BCR', 'FISV', 'SO', 'TWX', 'FSLR', 'HST', 'RSG', 'URBN', 'TSN', 'CHRW', 'TXT', 'PNW', 'AN', 'AVB', 'KLAC', 'GRMN', 'GPS', 'AIZ', 'DVA', 'FIS', 'HSY', 'GS', 'IBM', 'TMK', 'CRM', 'DPS', 'STT', 'CCE', 'JCI', 'GWW', 'MCHP', 'AKAM', 'XOM', 'AVGO', 'FITB', 'WEC', 'TSS', 'RIG', 'MNK', 'JBHT', 'AON', 'BRCM', 'NTRS', 'CSX', 'CTSH', 'EXPE', 'USB', 'MPC', 'NAVI', 'CSCO', 'TXN', 'EA', 'BEN', 'CTL', 'DO', 'CMG', 'IFF', 'DISCK', 'HP', 'WIN', 'WLTW', 'WY', 'AET', 'PCP', 'ETR', 'T', 'SNI', 'VIAB', 'ACE', 'WYNN', 'AAL', 'GIS', 'TSCO', 'XL', 'CMCSA', 'DGX', 'L', 'O', 'CAM', 'OXY', 'FCX', 'CME', 'NWS', 'MRK', 'DOV', 'LMT', 'SRE', 'APH', 'ED', 'ALL', 'AWK', 'MNST', 'XEL', 'FAST', 'EMN', 'NLSN', 'FLS', 'ABT', 'PCL', 'PSX', 'CNX', 'KMB', 'MS', 'SPG', 'ILMN', 'POM', 'TROW', 'STJ', 'NEM', 'D', 'FMC', 'MMM', 'AMT', 'PM', 'EQIX', 'ZTS', 'SPLV', 'WU', 'YHOO', 'NOV', 'APC', 'HAS', 'GMCR', 'CHD', 'EQT', 'AMP', 'BBY', 'HRB', 'JNPR', 'HCN']
+
+Date: 2016-04-17 21:44:35.488224
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 2
+Total Entries: 13695
+Not added: []
+
+Date: 2016-05-08 22:06:15.133300
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 443
+Total Entries: 8873
+Not added: ['NAVI', 'TRIP', 'ZION', 'CNP', 'PYPL', 'R', 'TDC', 'FOSL', 'CMS', 'MCD', 'AA', 'PHM', 'MDLZ', 'COL', 'ALTR', 'BHI', 'ETFC', 'USB', 'GS', 'CXO', 'LLY', 'DTE', 'TSCO', 'MET', 'HBAN', 'MAS', 'CHK', 'LB', 'SCG', 'FLS', 'SCHW', 'SNDK', 'CVS', 'DISCA', 'LEN', 'APD', 'DPS', 'SPLS', 'TAP', 'GT', 'FLIR', 'HOT', 'PCP', 'WIN', 'IFF', 'KSU', 'GD', 'F', 'ACE', 'DOV', 'XOM', 'TRV', 'PCL', 'BRCM', 'JOY', 'PAYX', 'CSRA', 'SE', 'GMCR', 'CAM', 'EMN', 'ADSK', 'ETR', 'CAH', 'SLB', 'BMY', 'DGX', 'PFG', 'MNST', 'ES', 'LUK', 'GILD', 'CF', 'FB', 'WYN', 'BLL', 'OXY', '^GSPC', 'ESS', 'PX', 'POM']
+
+Date: 2016-05-08 22:07:21.655061
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 6
+Total Entries: 30497
+Not added: []
+
+Date: 2016-05-09 09:42:26.687609
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 514
+Total Entries: 10293
+Not added: ['MTB', 'AAP', 'CAM', 'PCP', 'PCL', 'POM', 'ALTR', 'BRCM', 'GMCR', 'ACE']
+
+Date: 2016-05-14 20:52:15.346916
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 1
+Total Entries: 5
+Not added: []
+
+Date: 2016-05-14 21:12:35.601026
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 1
+Total Entries: 7154
+Not added: []
+
+Date: 2016-12-10 23:11:57.566699
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 13
+Total Entries: 146
+Not added: ['A', 'AA', 'AAL', 'AAP', 'AAPL', 'ABBV', 'ABC', 'ABK', 'ABT', 'ABX', 'ACAS', 'ACE', 'ACN', 'ACS', 'ADBE', 'ADI', 'ADM', 'ADP', 'ADS', 'ADSK', 'ADT', 'AEE', 'AEP', 'AES', 'AET', 'AFL', 'AFS', 'AGN', 'AIG', 'AIV', 'AIZ', 'AKAM', 'AKS', 'ALL', 'ALLE', 'ALTR', 'ALXN', 'AMAT', 'AMCC', 'AMD', 'AME', 'AMG', 'AMGN', 'AMP', 'AMR', 'AMT', 'AMZN', 'AN', 'ANF', 'ANTM', 'AON', 'APA', 'APC', 'APD', 'APH', 'APOL', 'ARC', 'ARG', 'ASH', 'ASN', 'ATH', 'ATI', 'ATVI', 'AVB', 'AVGO', 'AVP', 'AVY', 'AWE', 'AWK', 'AXP', 'AZO', 'BA', 'BAC', 'BAX', 'BBBY', 'BBT', 'BBY', 'BC', 'BCR', 'BDX', 'BEAM', 'BEN', 'BF-B', 'BFO', 'BGG', 'BHI', 'BIG', 'BIIB', 'BK', 'BLK', 'BLL', 'BMS', 'BMY', 'BOL', 'BRCM', 'BRK-B', 'BRL', 'BSC', 'BSX', 'BTU', 'BVSN', 'BWA', 'BXLT', 'BXP', 'C', 'CA', 'CAG', 'CAH', 'CAM', 'CAT', 'CB', 'CBG', 'CBH', 'CBS', 'CCE', 'CCI', 'CCK', 'CCL', 'CCU', 'CELG', 'CERN', 'CF', 'CFC', 'CFG', 'CG', 'CHA', 'CHD', 'CHK', 'CHRW', 'CI', 'CIEN', 'CINF', 'CL', 'CLF', 'CLX', 'CMA', 'CMCSA', 'CMCSK', 'CME', 'CMG', 'CMI', 'CMS', 'CMVT', 'CMX', 'CNC', 'CNP', 'CNX', 'COF', 'COG', 'COH', 'COL', 'COP', 'COST', 'CPB', 'CPGX', 'CPWR', 'CR', 'CRM', 'CS', 'CSC', 'CSCO', 'CSR', 'CSRA', 'CSX', 'CTAS', 'CTB', 'CTL', 'CTSH', 'CTXS', 'CVC', 'CVG', 'CVH', 'CVS', 'CVX', 'CXO', 'D', 'DAL', 'DD', 'DDR', 'DDS', 'DE', 'DELL', 'DF', 'DFS', 'DG', 'DGX', 'DHI', 'DHR', 'DIS', 'DISCA', 'DISCK', 'DLPH', 'DLTR', 'DLX', 'DNB', 'DNR', 'DO', 'DOV', 'DOW', 'DPS', 'DRI', 'DTE', 'DUK', 'DV', 'DVA', 'DVN', 'EA', 'EBAY', 'ECL', 'ED', 'EFU', 'EFX', 'EIX', 'EL', 'EMC', 'EMN', 'EMR', 'ENDP', 'EOG', 'EQIX', 'EQR', 'EQT', 'ES', 'ESRX', 'ESS', 'ESV', 'ETFC', 'ETN', 'ETR', 'EW', 'EXC', 'EXPD', 'EXPE', 'EXR', 'F', 'FAST', 'FB', 'FBF', 'FCX', 'FDX', 'FE', 'FFIV', 'FHN', 'FII', 'FIS', 'FISV', 'FITB', 'FLIR', 'FLR', 'FLS', 'FMC', 'FNM', 'FOSL', 'FOX', 'FOXA', 'FPC', 'FRE', 'FRT', 'FRX', 'FSLR', 'FTI', 'FTR', 'FWC', 'GAS', 'GD', 'GE', 'GGP', 'GHC', 'GILD', 'GIS', 'GLW', 'GM', 'GMCR', 'GME', 'GNW', 'GOOG', 'GOOGL', 'GPC', 'GPS', 'GR', 'GRA', 'GRMN', 'GS', 'GT', 'GTE', 'GWW', 'HAL', 'HAR', 'HAS', 'HBAN', 'HBI', 'HCA', 'HCN', 'HCP', 'HD', 'HES', 'HIG', 'HMA', 'HNZ', 'HOG', 'HON', 'HOT', 'HP', 'HPE', 'HPQ', 'HRB', 'HRC', 'HRL', 'HRS', 'HSIC', 'HST', 'HSY', 'HUM', 'IACI', 'IBM', 'ICE', 'IFF', 'IGT', 'ILMN', 'INTC', 'INTU', 'IP', 'IPG', 'IR', 'IRM', 'ISRG', 'ITT', 'ITW', 'IVZ', 'JBHT', 'JBL', 'JCI', 'JCP', 'JEC', 'JNJ', 'JNPR', 'JNS', 'JNY', 'JOY', 'JPM', 'JWN', 'K', 'KBH', 'KEY', 'KHC', 'KIM', 'KLAC', 'KMB', 'KMG', 'KMI', 'KMX', 'KO', 'KORS', 'KR', 'KSS', 'KSU', 'L', 'LB', 'LEG', 'LEN', 'LH', 'LLL', 'LLTC', 'LLY', 'LM', 'LMT', 'LNC', 'LOW', 'LPX', 'LRCX', 'LSI', 'LUK', 'LUV', 'LVLT', 'LXK', 'LYB', 'M', 'MA', 'MAC', 'MAR', 'MAS', 'MAT', 'MBI', 'MCD', 'MCHP', 'MCK', 'MCO', 'MDLZ', 'MDP', 'MDR', 'MDT', 'MEDI', 'MEL', 'MER', 'MET', 'MHFI', 'MHK', 'MIL', 'MJN', 'MKC', 'MLM', 'MMC', 'MMM', 'MNK', 'MNST', 'MO', 'MOLX', 'MON', 'MOS', 'MPC', 'MRK', 'MRO', 'MS', 'MSFT', 'MSI', 'MTB', 'MTG', 'MTW', 'MU', 'MUR', 'MWW', 'MXIM', 'MYL', 'NAV', 'NAVI', 'NBL', 'NBR', 'NC', 'NCC', 'NCE', 'NCR', 'NDAQ', 'NE', 'NEE', 'NEM', 'NFLX', 'NFX', 'NGH', 'NI', 'NKE', 'NLSN', 'NMK', 'NOC', 'NOV', 'NRG', 'NSC', 'NTAP', 'NTRS', 'NUE', 'NVDA', 'NWL', 'NWS', 'NWSA', 'NYT', 'NYX', 'O', 'ODP', 'OI', 'OKE', 'OMC', 'OMX', 'ORCL', 'ORLY', 'OXY', 'PAYX', 'PBCT', 'PBG', 'PBI', 'PBY', 'PCAR', 'PCG', 'PCH', 'PCL', 'PCLN', 'PCP', 'PDCO', 'PEG', 'PEP', 'PFE', 'PFG', 'PG', 'PGR', 'PH', 'PHA', 'PHM', 'PKI', 'PLD', 'PM', 'PMCS', 'PNC', 'PNR', 'PNU', 'PNW', 'POM', 'PPG', 'PPL', 'PRD', 'PRGO', 'PRU', 'PSA', 'PSX', 'PTV', 'PVH', 'PWER', 'PWR', 'PX', 'PXD', 'PYPL', 'QCOM', 'QEP', 'QLGC', 'QRVO', 'R', 'RAD', 'RAI', 'RCL', 'RDC', 'REGN', 'RF', 'RHI', 'RHT', 'RIG', 'RL', 'ROH', 'ROK', 'ROP', 'ROST', 'RRC', 'RRD', 'RSG', 'RSH', 'RTN', 'S', 'SANM', 'SAPE', 'SBL', 'SBUX', 'SCG', 'SCHW', 'SCI', 'SE', 'SEE', 'SEG', 'SGI', 'SHLD', 'SHW', 'SIG', 'SJM', 'SLB', 'SLG', 'SLM', 'SMI', 'SMS', 'SNA', 'SNDK', 'SNI', 'SNV', 'SO', 'SOV', 'SPG', 'SPLS', 'SPLV', 'SRCL', 'SRE', 'SRV', 'SSP', 'STI', 'STJ', 'STR', 'STT', 'STX', 'STZ', 'SV', 'SVU', 'SWK', 'SWKS', 'SWN', 'SYF', 'SYK', 'SYMC', 'SYY', 'T', 'TAP', 'TDC', 'TE', 'TEL', 'TER', 'TEX', 'TGNA', 'TGT', 'THC', 'TIE', 'TIF', 'TJX', 'TKR', 'TLAB', 'TMC', 'TMK', 'TMO', 'TOY', 'TRB', 'TRIP', 'TROW', 'TRV', 'TSCO', 'TSN', 'TSO', 'TSS', 'TT', 'TUP', 'TWC', 'TWX', 'TXN', 'TXT', 'TYC', 'UA', 'UAL', 'UCM', 'UDR', 'UHS', 'UIS', 'UN', 'UNH', 'UNM', 'UNP', 'UPS', 'URBN', 'URI', 'USB', 'UTX', 'V', 'VAR', 'VFC', 'VIAB', 'VLO', 'VMC', 'VNO', 'VO', 'VRSK', 'VRSN', 'VRTX', 'VTR', 'VZ', 'WAT', 'WBA', 'WDC', 'WEC', 'WEN', 'WFC', 'WFM', 'WFR', 'WFT', 'WHR', 'WIN', 'WLTW', 'WM', 'WMB', 'WMT', 'WOR', 'WPX', 'WRK', 'WU', 'WY', 'WYN', 'WYNN', 'X', 'XEC', 'XEL', 'XL', 'XLNX', 'XOM', 'XRAY', 'XRX', 'XYL', 'YHOO', 'YUM', 'ZBH', 'ZION', 'ZTS', '^GSPC', '^SP500TR']
+
+Date: 2016-12-10 23:14:50.365149
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 651
+Total Entries: 98250
+Not added: ['ACE', 'ALTR', 'BEAM', 'BRCM', 'BTU', 'CAM', 'CMCSK', 'CMVT', 'CPGX', 'CPWR', 'DELL', 'FNM', 'FPC', 'FRX', 'GAS', 'GMCR', 'HMA', 'HNZ', 'IACI', 'JNY', 'MEDI', 'MHFI', 'MIL', 'MOLX', 'NGH', 'NMK', 'NYX', 'OMX', 'PBY', 'PCL', 'PCP', 'PMCS', 'PNU', 'POM', 'PWER', 'ROH', 'RSH', 'SAPE', 'SEG', 'TE', 'TLAB', 'TWC', 'WFR']
+
+Date: 2016-12-10 23:17:13.116030
+Inserted historical stocks from previous latest to yesterday
+Total Stocks Added: 23
+Total Entries: 100942
+Not added: []
