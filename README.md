@@ -2,9 +2,13 @@
 A fast, flexible and self-maintaining real-time web application which calculates minimum volatility portfolios (MVPs). Historical portfolio volatility is optimally minimised to calculate the MVP. 
 
 ## Prerequisites
-* Stock database (available on request)
-* Python 3.4.2+, NumPy, SciPy, Django, ...
+* Python 3.4.2+, NumPy, SciPy, Django
   * pip install -r requirements.txt
+
+## Database
+* Can be reconstructed:
+  * python db/reconstruct.py (may take a while...)
+* Alternatively, a copy may be available upon request (email to request)
 
 ## Starting the web application
 * python manage.py runserver
@@ -12,9 +16,16 @@ A fast, flexible and self-maintaining real-time web application which calculates
 ## Functionality
 * Instantly calculate a custom and optimal MVP using live stock prices on the New York Stock Exchange (NYSE).
   * **Input:** desired investment, range of historical minimisation period (in years), low volatility stocks only (boolean)
+  
+  ![](images/input.png)
+  
   * **Output:** MVP, it's constituent stocks and corresponding shares, performance statistics over minimisation period
+  
+  ![](images/output.png)
+  
 * Secure admin site
   * Self-maintaining stock database using Yahoo Finance
+  * See screenshots in images folder for examples of functionality
 
 
 ## Data model
