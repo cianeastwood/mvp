@@ -11,10 +11,10 @@ A fast, flexible and self-maintaining real-time web application which calculates
 
 ## Functionality
 * Instantly calculate a custom and optimal MVP using live stock prices on the New York Stock Exchange (NYSE).
- * **Input:** desired investment, range of historical minimisation period (in years), low volatility stocks only (boolean)
- * **Output:** MVP, it's consituent stocks and corresponding shares, performance statistics over minimisation period
+  * **Input:** desired investment, range of historical minimisation period (in years), low volatility stocks only (boolean)
+  * **Output:** MVP, it's consituent stocks and corresponding shares, performance statistics over minimisation period
 * Secure admin site
- * Self-maintaining stock database using Yahoo Finance
+  * Self-maintaining stock database using Yahoo Finance
 
 
 ## Data model
