@@ -15,11 +15,11 @@ A fast, flexible and self-maintaining real-time web application which calculates
 
 ## Functionality
 * Instantly calculate a custom and optimal MVP using live stock prices on the New York Stock Exchange (NYSE).
-  * **Input:** desired investment, range of historical minimisation period (in years), low volatility stocks only (boolean)
+  * **Input:** investment, minimum spread (number of companies, diversification), minimisation period (years), low volatility stocks only (boolean)
   
   ![](images/input.png)
   
-  * **Output:** MVP, it's constituent stocks and corresponding shares, performance statistics over minimisation period
+  * **Output:** MVP constituent stocks and corresponding shares for given investment, performance statistics over minimisation period
   
   ![](images/output.png)
   
