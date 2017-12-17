@@ -1,17 +1,41 @@
 # Minimium Volatility Portfolios
-A fast, flexible and self-maintaining real-time web application which calculates minimum volatility portfolios (MVPs). Historical portfolio volatility is optimally minimised to calculate the MVP. 
+A fast, flexible and self-maintaining real-time web application which calculates optimal minimum volatility portfolios (MVPs) using historical stock data.
 
 ## Prerequisites
 * Python 3.4.2+, NumPy, SciPy, Django
-  * pip install -r requirements.txt
+* `pip install -r requirements.txt`
 
-## Database
-* Can be reconstructed:
-  * python db/reconstruct.py (may take a while...)
-* Alternatively, a copy may be available upon request (email to request)
+## Setup
+* Env variables (in virtual env)
+  * bin/activate
+    * `export OLD_PYTHONPATH="$PYTHONPATH"`
+    * `export PYTHONPATH="/the/path/to/mvp/"`
+    * `export DJANGO_SETTINGS_MODULE=fyp.settings`
+  * bin/deactivate
+    * `export PYTHONPATH="$OLD_PYTHONPATH"`
+* Database
+  * Create database tables for installed apps (vola, admin, etc.)
+    * `python manage.py migrate`
+  * Scrape all necessary stock data from Yahoo Finance & pre-calculate some mvps
+    * `python db/reconstruct.py`
+  * Create new admin user
+    * `python manage.py createsuperuser`
+* Start the web application (development server)
+  * `python manage.py runserver`
+* Open web app
+  * Home: http://127.0.0.1:8000/
+  * Admin: http://127.0.0.1:8000/admin
 
-## Starting the web application
-* python manage.py runserver
+## Main files
+* **vola/minimizer.py**: provides functions to calculate the shares that minimize the portfolio's historical volatility. 
+  * *minimize()*: Utilizes scipy minimize function with Sequential Least SQuares Programming (SLSQP) to minimize the standard deviation of the given daily returns.
+* **vola/portfolioAnalyzer.py**: provides functions to analyze a portfolio. Includes performance simulation against benchmarks and statistics calculation.
+* **vola/portfolioCalculator.py**: provides functions for retrieving, calculating and storing portfolios and their past performances.
+* **vola/admin.py**: configures the admin application and provides a web API for database updates. 
+* **db/maintenance.py**: provides functions to keep the database up to date.
+* **db/reconstruction.py**: contains manual functions needed to reconstruct the database.
+* **scraper/snp500.py**: provides a an API for retrieving the latest S&P 500 constituents from Wikipedia.
+* **scraper/ystockquote.py**: provides an API for retrieving stock data from Yahoo Finance.
 
 ## Functionality
 * Instantly calculate a custom and optimal MVP using live stock prices on the New York Stock Exchange (NYSE).
@@ -23,10 +47,11 @@ A fast, flexible and self-maintaining real-time web application which calculates
   
   ![](images/output.png)
   
-* Secure admin site
-  * Self-maintaining stock database using Yahoo Finance
-  * See screenshots in images folder for examples of functionality
-
+* Secure admin site for maintaining stock database (See screenshots in images folder for examples of functionality)
+  * Update all company stocks (scrape latest from Yahoo Finance)
+  * Update current S&P 500 constituents (scrape this info from Wikipedia) and populate stock data back to 1988 for any new companies added.
+  * Update portfolio calucations (recalculate optimal allocations for all parameter combinations with latest stock data)
+  * Update portfolio performances (recalculate performances statistics and graphs vs. benchmark indexes)
 
 ## Data model
 * **Company:** Stores a single company entry.
@@ -39,5 +64,7 @@ A fast, flexible and self-maintaining real-time web application which calculates
 
 ![](images/dataModelNew.png)
 
-## Directory Structure
+## Limitations
+* Yahoo Finance data is dirty
+  * Missing stocks, SNP companies (mergers, acquisitions, etc.)
 
