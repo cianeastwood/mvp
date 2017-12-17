@@ -5,6 +5,7 @@ from db import access as dba, stockInserter
 from vola import portfolioCalculator
 from bulk_update.helper import bulk_update
 import os
+import django
 
 '''
 This module contains manual functions needed to reconstruct the database.
@@ -16,42 +17,6 @@ This module contains manual functions needed to reconstruct the database.
 '''
 
 directory = os.path.join(os.path.abspath(os.path.dirname(__file__)), "textfiles/")
-
-def alter_BOL():
-  start = datetime.strptime('20040101', '%Y%m%d').date()
-  end = datetime.strptime('20041231', '%Y%m%d').date()
-  a = Stock.objects.filter(company__symbol='A', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
-  bol = Stock.objects.filter(company__symbol='BOL', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
-  to_add = [x for x in a if x not in bol]
-  to_remove = [x[0] for x in bol if x not in a]
-  prev_days = [x[0] + timedelta(days=1) for x in to_add]
-  prev_days_info = list(Stock.objects.filter(company__symbol='BOL', date__in=prev_days).values_list('date', 'close_price', 'change').order_by('date', 'company__symbol'))
-  new_info = prev_days_info[-1]
-  new_info = (new_info[0] - timedelta(days=1), new_info[1], new_info[2])
-  prev_days_info.append(new_info)
-  bulklist = []
-  for i in prev_days_info:
-    bulklist.append(Stock(company=Company.objects.get(symbol='BOL'), close_price=i[1], change=i[2], date=i[0] - timedelta(days=1)))
-  # Stock.objects.filter(company__symbol='BOL', date__in=to_remove).delete()
-  Stock.objects.bulk_create(bulklist)
-  bol = Stock.objects.filter(company__symbol='BOL', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
-  print(len(bol))
-
-def alter_others():
-  start = datetime.strptime('20110101', '%Y%m%d').date()
-  end = datetime.strptime('20111231', '%Y%m%d').date()
-  a = Stock.objects.filter(company__symbol='A', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
-  nyx = Stock.objects.filter(company__symbol='NYX', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
-  to_remove = [x[0] for x in nyx if x not in a]
-  Stock.objects.filter(company__symbol__in=['NYX', 'FRX', 'CPWR'], date__in=to_remove).delete()
-  nyx = Stock.objects.filter(company__symbol='NYX', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
-  print(len(nyx))
-
-#Remove dirty data from yahoo - companies with multiple prices == 0
-#17 companies
-def filter_zero_prices():
-  remove = list(set(Stock.objects.filter(close_price=0).values_list('company__symbol', flat=True)))
-  return remove
 
 def populate_companies():
   bulklist = []
@@ -85,6 +50,10 @@ def populate_historial_companies():
     bulklist.append(Company(symbol=new_company[0],name=new_company[1]))
   Company.objects.bulk_create(bulklist)
   return len(bulklist)
+
+def create_SNP500_objs(years):
+    snps = [SNP500(year=year) for year in years]
+    SNP500.objects.bulk_create(snps)
 
 def populate_hist_snp():
   f = open(directory + 'availableSNP.csv')
@@ -123,6 +92,7 @@ def populate_stocks(start_date, end_date):
     if not hist_prices: #http error / no stock hist for specified dates
       not_added.append(c.symbol)
       continue
+    print(hist_prices)
     bulklist.extend(stockInserter.create_stock_objects(hist_prices, c))
   stockInserter.insert_and_log_stocks(bulklist, len(companies) - len(not_added), start_date, end_date, not_added)
   return len(bulklist)
@@ -180,13 +150,67 @@ def populate_past_statistics_and_plot():
   bulk_update(plots, update_fields=['html'])
   Past_Statistics.objects.bulk_create(past_stats)
 
+# START: Remove dirty data from yahoo ------------------
+def cleanse_BOL():
+  start = datetime.strptime('20040101', '%Y%m%d').date()
+  end = datetime.strptime('20041231', '%Y%m%d').date()
+  a = Stock.objects.filter(company__symbol='A', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
+  bol = Stock.objects.filter(company__symbol='BOL', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
+  to_add = [x for x in a if x not in bol]
+  to_remove = [x[0] for x in bol if x not in a]
+  prev_days = [x[0] + timedelta(days=1) for x in to_add]
+  prev_days_info = list(Stock.objects.filter(company__symbol='BOL', date__in=prev_days).values_list('date', 'close_price', 'change').order_by('date', 'company__symbol'))
+  new_info = prev_days_info[-1]
+  new_info = (new_info[0] - timedelta(days=1), new_info[1], new_info[2])
+  prev_days_info.append(new_info)
+  bulklist = []
+  for i in prev_days_info:
+    bulklist.append(Stock(company=Company.objects.get(symbol='BOL'), close_price=i[1], change=i[2], date=i[0] - timedelta(days=1)))
+  # Stock.objects.filter(company__symbol='BOL', date__in=to_remove).delete()
+  Stock.objects.bulk_create(bulklist)
+  bol = Stock.objects.filter(company__symbol='BOL', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
+  print(len(bol))
+
+def cleanse_others():
+  start = datetime.strptime('20110101', '%Y%m%d').date()
+  end = datetime.strptime('20111231', '%Y%m%d').date()
+  a = Stock.objects.filter(company__symbol='A', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
+  nyx = Stock.objects.filter(company__symbol='NYX', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
+  to_remove = [x[0] for x in nyx if x not in a]
+  Stock.objects.filter(company__symbol__in=['NYX', 'FRX', 'CPWR'], date__in=to_remove).delete()
+  nyx = Stock.objects.filter(company__symbol='NYX', date__gte=start, date__lte=end).values_list('date').order_by('date', 'company__symbol')
+  print(len(nyx))
+
+def filter_zero_prices():
+  ''' 17 companies with multiple prices == 0 '''
+  remove = list(set(Stock.objects.filter(close_price=0).values_list('company__symbol', flat=True)))
+  return remove
+
+# END: Remove dirty data from yahoo ------------------
+
 if __name__ == '__main__':
+    # Set params
+    start_date = '20000101'
+    end_date = '20160301'
+    snp_years = [y for y in range(int(start_date[:4]), int(end_date[:4]) + 1)]
+    snp_years = snp_years
+    django.setup()
+
+    # Populate copmany, stock and S&P500 info
     populate_companies() # Create Company objects from txt file of company info
     populate_companies_2016() # Create Company objects for more recent companies (2016) - different txt file
     populate_historial_companies() # Recent companies in SNP not in prev txt files - create company objects (no descriptions)
+    create_SNP500_objs(snp_years) # Stores list of symbols for each year
     populate_hist_snp() # Add snp companies to relevant snp list (one per year in range)
     populate_snp_2016() # Add snp companies to relevant snp list (one per year in range) - 2016 in different file
-    populate_stocks('20000101', '20160301') # Create stock objects and populate with stock info in desired range 'YYYYMMDD'
+    populate_stocks(start_date, end_date) # Create stock objects and populate with stock info in desired range 'YYYYMMDD'
+
+    # Remove dirty data from yahoo
+    cleanse_BOL()
+    cleanse_others()
+    filter_zero_prices()
+
+    # Pre-compute and store custom mvps and corresponding stats
     populate_custom_portfolios() # Pre-compute and store all possible custom portfolios for increased peformance
     select_suggested_portfolio() # Select suggested mvp params, i.e. spread, period, lv
     populate_past_portfolios() # Past portfolio = old portfolio with out-of-date end date... i.e. the is a more recent Portfolio object
