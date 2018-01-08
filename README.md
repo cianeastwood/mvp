@@ -32,7 +32,7 @@ A fast, flexible and self-maintaining real-time web application which calculates
 * **vola/portfolioAnalyzer.py**: provides functions to analyze a portfolio. Includes performance simulation against benchmarks and statistics calculation.
 * **vola/portfolioCalculator.py**: provides functions for retrieving, calculating and storing portfolios and their past performances.
 * **vola/admin.py**: configures the admin application and provides a web API for database updates. 
-* **db/maintenance.py**: provides functions to keep the database up to date.
+* **db/maintenance_multiprocessing.py**: provides efficient functions to keep the database up to date.
 * **db/reconstruction.py**: contains manual functions needed to reconstruct the database.
 * **scraper/snp500.py**: provides a an API for retrieving the latest S&P 500 constituents from Wikipedia.
 * **scraper/ystockquote.py**: provides an API for retrieving stock data from Yahoo Finance.
